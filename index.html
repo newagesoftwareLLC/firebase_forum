@@ -1,0 +1,62 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.1/dist/instantsearch.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.1/dist/instantsearch-theme-algolia.min.css">
+        <link rel="stylesheet" href="css/forum.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/livequery/1.1.1/jquery.livequery.min.js" integrity="sha512-QumSM40UdiorWgEh4EptciEmMi+nVyZZpfV/sGHvk/u8F2/Pp5S/zwPt2SA3gLz/to/qG0hugB/1k5szDrynhw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch.umd.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-messaging.js"></script>
+        <script src="js/config.js"></script>
+    </head>
+
+    <body>
+        <div id="login_info"></div>
+        <div id="searchbox" placeholder="Search The Forums" class="ais-SearchBox"></div>
+        <h3>Threads</h3>
+        <p>
+            <button data-fancybox data-options='{"touch":false,"clickOutside":false}' data-src="#NewPostForm">Create New Thread</button>
+            <div id="NewPostForm">
+                <h4>Create New Thread</h4>
+                Category: <select id="category">
+                    <option>Test</option>
+                </select><br>
+                <input id="title" placeholder="Your Post Title Here"><br>
+                <textarea id="content" placeholder="Your Post Content Here"></textarea><br>
+                <button onclick="SubmitNewPost()">SUBMIT POST</button>
+            </div>
+        </p>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+        <div class="post_info">
+            <div id="post_content"></div>
+            <hr>
+            <h3>Post Replies</h3>
+            <button data-fancybox data-options='{"touch":false,"clickOutside":false}' data-src="#NewReplyForm">Create New Reply</button>
+                <div id="NewReplyForm">
+                    <h4>Create New Reply</h4>
+                    <textarea id="reply_content" placeholder="Your Reply Content Here"></textarea><br>
+                    <button onclick="SubmitNewReply()">SUBMIT REPLY</button>
+                </div>
+            <div id="post_replies"></div>
+        </div>
+
+        <script src="js/firebase.js"></script>
+        <script src="js/algolia.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/forum.js"></script>
+    </body>
+
+</html>

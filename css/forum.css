@@ -1,0 +1,43 @@
+body {
+    padding:10px;
+}
+
+#NewPostForm, #NewReplyForm {
+    display: none;
+    border: thin solid black;
+    padding:3px;
+    width:800px;
+}
+
+#title {
+    width:100%;
+}
+
+.CodeMirror-scroll {
+    height:500px !important;
+}
+
+.post_info {
+    position:absolute;
+    left:340px;
+    top:10px;
+    border-left:thin solid #ccc;
+    padding-left:10px;
+    visibility: hidden;
+}
+
+.fancybox-content {
+    height : 800px;
+    max-height : 90%;
+    margin: 0;
+}
+
+#post_replies {
+    margin-top:10px;
+}
+
+#login_info {
+    position:absolute;
+    top:5px;
+    right:10px;
+}
