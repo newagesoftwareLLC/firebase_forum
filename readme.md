@@ -8,4 +8,4 @@ Forum system for static web pages. This is considered a very cheap yet fast and 
 - Programmed completely in JavaScript.
 - Search functionality provided by [Algolia](https://www.algolia.com/).
 
-Follow the [Wiki Setup page](https://github.com/newagesoftwareLLC/firebase_forum/wiki/Setup) for installation instructions.
+Follow the [Wiki Firebase System Setup Instructions page](https://github.com/newagesoftwareLLC/firebase_forum/wiki/Firebase-Services-Setup-Instructions) for installation instructions.
