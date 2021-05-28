@@ -1,31 +1,11 @@
 ## About
-Forum system for static web pages.
+Forum system for static web pages. This is considered a very cheap yet fast and powerful forum hosting solution. Please note, this is technically free, but you will need to provide a credit card for some Firebase services, as it is possible to eventually go over their free tier usage. 
 
-- DB hosted in Firestore.
-- Messaging by Firebase.
+## Features
+- Database hosting provided by [Firestore Database](https://firebase.google.com/products/firestore).
+- Messaging provided by [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging).
+- Processing functions provided by [Firebase Cloud Functions](https://firebase.google.com/products/functions).
 - Programmed completely in JavaScript.
-- Search functionality provided by Algolia.
+- Search functionality provided by [Algolia](https://www.algolia.com/).
 
-## Setup
-1) Create a [Firebase.com](https://firebase.google.com) account. Create a project.
-2) Create an [Algolia.com](https://www.algolia.com) account. Create an Indices Index that reflects the project name in Firebase.
-3) Open `js/config.js` in a text editor, like NotePad, etc.
-- Firebase Cloud Messaging Key -> console.firebase.google.com/project/(PROJECT_ID)/settings/cloudmessaging
-- [Firebase configuration info](https://firebase.google.com/docs/web/setup) (Scroll half way down)
-- Algolia API Keys -> algolia.com/apps/(APP_ID)/api-keys/all
-4) On firebase.com, create a Firestore data collection. Edit the rules to:
-```
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      allow read: if true;
-      allow write: if request.auth.uid != null;
-    }
-  }
-}
-```
-5) In the Firestore Database section, click Indexes. You need to create an index for `created Descending`. If it's not created, you'll get a warning in the browser console with a link to create it later.
-6) In Firebase Authentication, click `Sign-in method` and scroll down to Authorized domains. Be sure to add your server IP, including any dev machine IP addresses. You can also setup a Github sign-in provider here.
-7) In Algolia under the `Indices > Configuration > Ranking and Sorting` click `Add custom ranking attribute` and add `created Descending`.
-8) Follow the rest of the steps in [this Gist file](https://gist.github.com/erfg12/f5a6ef802f2883ae9327ae7d2fdaaee0) to setup the Firebase functions.
+Follow the [Wiki Setup page](https://github.com/newagesoftwareLLC/firebase_forum/wiki/Setup) for installation instructions.
