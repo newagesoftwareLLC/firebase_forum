@@ -1,11 +1,15 @@
 ## About
-Forum system for static web pages. This is considered a very cheap yet fast and powerful forum hosting solution. Please note, this is technically free, but you will need to provide a credit card for some Firebase services, as it is possible to eventually go over their free tier usage. 
+Forum system for static web pages. This is considered a very cheap, fast and powerful forum hosting solution. Please note, you will need to provide a credit card for some Firebase services, as it is possible to eventually go over their free tier usage.
 
 ## Features
-- Database hosting provided by [Firestore Database](https://firebase.google.com/products/firestore).
-- Messaging provided by [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging).
-- Processing functions provided by [Firebase Cloud Functions](https://firebase.google.com/products/functions).
-- Programmed completely in JavaScript.
+- Cannot DDoS attack.
+- Fast loading speeds for all users around the world.
+- Searching is immediate. As you type results are shown.
+- New posts are displayed immediately, no page refreshing necessary.
+- Very affordable.
+
+## Services
+- Messaging, database, functions and accounts provided by [Firebase](https://firebase.google.com).
 - Search functionality provided by [Algolia](https://www.algolia.com/).
 
-Follow the [Wiki Firebase System Setup Instructions page](https://github.com/newagesoftwareLLC/firebase_forum/wiki/Firebase-Services-Setup-Instructions) for installation instructions.
+Follow the [Firebase System Setup Instructions page](https://github.com/newagesoftwareLLC/firebase_forum/wiki/Firebase-Services-Setup-Instructions) for installation instructions.
