@@ -19,7 +19,7 @@ function ArrowAtThread(firebaseID) {
 
 $( document ).ready(function() {
     // add post categories array items to HTML
-    for (var i = 1; i<=PostCategories.length; i++){
+    for (var i = 0; i < PostCategories.length; i++){
         var opt = document.createElement('option');
         opt.innerHTML = PostCategories[i];
         document.getElementById('category').appendChild(opt);
