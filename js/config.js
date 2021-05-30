@@ -11,9 +11,7 @@ var firebaseConfig = {
     measurementId: ""
 };
 
-var UserListURL_Function_URL = ""; // replace with your cloud function URL. Should be https://(URL)/getUserList
-var NewPost_Function_URL = ""; // Should be https://(URL)/newPost
-var NewReply_Function_URL = ""; // Should be https://(URL)/newReply
+var Function_URL = ""; // replace with your cloud function URL. Should be https://us-central1-(PROJECT_ID).cloudfunctions.net
 
 // Get Firebase messaging keys at console.firebase.google.com/project/(PROJECT_ID)/settings/cloudmessaging
 var Firebase_Messaging_vapidKey = ""; // Web Push certificates > Key pair

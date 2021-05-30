@@ -46,7 +46,7 @@ function SendMessage(type, obj_id, user_id, content, title, category) {
 function SubmitNewPost() {
     AuthCheck();
     $.ajax({
-        url: NewPost_Function_URL,
+        url: Function_URL + "/newPost",
         type: 'post',
         data: {
             category: document.getElementById("category").value, 
@@ -85,7 +85,7 @@ function SubmitNewReply() {
         return;
     }
     $.ajax({
-        url: NewReply_Function_URL,
+        url: Function_URL + "/newPost",
         type: 'post',
         data: {
             parent: topicID,
@@ -133,7 +133,7 @@ async function FetchUsers() { // displayName, photoURL
     }
 
     if (localStorage.getItem("FetchedUsers") === null) {
-        return $.getJSON(UserListURL_Function_URL).then(function(data){
+        return $.getJSON(Function_URL + "/getUserList").then(function(data){
             localStorage.setItem( "FetchedUsers", JSON.stringify(data) );
             return JSON.parse( localStorage.getItem('FetchedUsers') );
         })
