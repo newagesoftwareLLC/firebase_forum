@@ -52,7 +52,8 @@ function SubmitNewPost() {
             category: document.getElementById("category").value, 
             content: simplemde_post.value(),
             title: document.getElementById("title").value, 
-            accid: uid
+            accid: uid,
+            type: "newtopic"
         },
         dataType: 'application/json',
         complete: function(xhr) {
@@ -89,7 +90,8 @@ function SubmitNewReply() {
         data: {
             parent: topicID,
             content: simplemde_reply.value(),
-            accid: uid
+            accid: uid,
+            type: "reply"
         },
         dataType: 'application/json',
         complete: function(xhr) {
