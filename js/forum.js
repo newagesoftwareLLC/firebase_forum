@@ -17,6 +17,15 @@ function ArrowAtThread(firebaseID) {
     prevIDs.push(firebaseID);
 }
 
+$( document ).ready(function() {
+    // add post categories array items to HTML
+    for (var i = 1; i<=PostCategories.length; i++){
+        var opt = document.createElement('option');
+        opt.innerHTML = PostCategories[i];
+        document.getElementById('category').appendChild(opt);
+    }
+});
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js')
     .then(function(registration) {

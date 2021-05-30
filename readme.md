@@ -6,7 +6,7 @@ Forum system for static web pages. This is considered a very cheap, fast and pow
 - Fast loading speeds for all users around the world.
 - Searching is immediate. As you type results are shown.
 - New posts are displayed immediately, no page refreshing necessary.
-- Very affordable.
+- Free to start hosting a forum.
 
 ## Services
 - Messaging, database, functions and accounts provided by [Firebase](https://firebase.google.com).
